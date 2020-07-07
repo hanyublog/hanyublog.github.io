@@ -156,6 +156,77 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-hexo个人博客的搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/07/hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/">hexo个人博客的搭建</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/07/hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/" class="archive-article-date">
+  	<time datetime="2020-07-07T05:22:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#第一章原理<br>hexo是基于nodejs的博客框架在GitHub部署，供外界浏览</p>
+<p>#第二章搭建</p>
+<p>hexo在不同的操作系统（linux，Windows，Mac）上的搭建的方式有些许不同<br>具体区别可以查看hexo文档<br>我的电脑系统是windows系统，我的搭建过程如下：<br>（说明一下，我是通过GitBash，在本地下载hexo框架，是否还有其它方式就不了解了）<br>第一步:准备工作：<br>1）下载Node.js 和 Git<br>Nodejs 下载地址 <a href="http://www.nodejs.org" target="_blank" rel="noopener">www.nodejs.org</a><br>Git下载地址 <a href="https://npm.taobao.org/mirrors/git-for-windows/" target="_blank" rel="noopener">https://npm.taobao.org/mirrors/git-for-windows/</a> 选择你要下载的版本，我下载的是2.27 也就是最新的版本<br>安装呢，百度上搜所教程 我建议是自己先琢磨琢磨怎么装，如果实在有不懂的地方在去看教程</p>
+<p>第二步:搭建本地hexo博客：<br>1）Git安装完成后 桌面会出现GitBash，打开<br>如果你不确定你的nodejs是否安装成功，输入指令 node -v 和 npm -v 查看 如果出现对应的版本号 就说明安装成功，否则就失败<br>这里的npm是包管理工具，就是下载东西用的<br>2）更换包管理工具<br>输入命令： npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a><br>这一步的目的是为了速度更快一点，用淘宝的镜像源，用淘宝的镜像源需要下载 cnpm（通过npm下载）<br>至于为什么用cnpm 而不用 npm，因为npm是国外的源，国内访问国外的网站，那速度 2333~<br>3)安装hexo框架<br>输入命令: cnpm install -g hexo-cli<br>下载完成后：hexo -v 检验是否下载成功<br>3）初始化博客<br>这步进行之前你要找找一个位置来存放的你的博客的所有信息<br>我的是在 E/blog<br>这个文件夹可以直接在E盘创建好也可以用shell命令创建，前者方便直观一些，推荐前者<br>创建完之后开始初始化博客<br>命令:cd /E/blog 这行的作用是前往E盘的blog 文件夹  也就是事先创建的存放博客的所有信息的地方<br>命令:hexo init 初始化博客<br>初始化完成后 可以输入命令: ll 查看文件夹多了哪些东西 当然也可以找到E盘打开文件夹<br>4）将博客发布到本地服务器<br>输入命令: hexo s<br>这时候会出现本地的端口默认是locakhost:4000<br>打开浏览器输入对应的端口就会出现你的博客啦</p>
+<p>第三步:将博客部署到GitHub<br>1）打开你的GitHub 创建的新的仓库名字必须是 GitHub名+.github.io<br>输入命令: cnpm install –save hexo-deployer-git<br>2）下载成功后修改博客的配置文件 即blog 文件夹下的 _config.yml文件<br>具体的命令是在blog文件夹下（可以使用pwd查看的在那个文件夹）:vim _config.yml<br>打开配置文件后：<br>找到并修改：<br>type: git<br>  repo: （你在github创建的仓库的http地址）<br>  branch: master<br>修改完成后退出<br>3）在blog文件夹下<br>输入下面四个指令：<br>hexo clean(清除缓存）<br>hexo s(发布到本地服务器，供修改查看使用）<br>hexo g(生成静态文件）<br>hexo d(发布到github)</p>
+<p>OK!!! 终于完成了 </p>
+<p>#总结</p>
+<p>以上就是hexo博客的粗略搭建方法，共借鉴和自己复习使用 嘻嘻<br>具体步骤参考：<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/</a><br>或者哔哩哔哩搜索up主：我是程序羊</p>
+<p>好了，散会———</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/07/hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-博客初体验" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
